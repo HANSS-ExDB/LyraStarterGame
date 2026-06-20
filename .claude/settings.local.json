@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git init *)",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\LyraStarterGame\" -Directory | ForEach-Object { $size = \\(Get-ChildItem $_.FullName -Recurse -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum\\).Sum; [PSCustomObject]@{Folder=$_.Name; SizeMB=[math]::Round\\($size/1MB,1\\)} } | Sort-Object SizeMB -Descending)",
+      "PowerShell(git lfs *)",
+      "PowerShell(git add *)"
+    ]
+  }
+}
